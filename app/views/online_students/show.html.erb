@@ -1,0 +1,74 @@
+<div class="page-header">
+  <%= link_to online_students_path, :class => 'btn' do %>
+    <i class="icon-list-alt"></i>
+    Back
+  <% end %>
+  <%= link_to edit_online_student_path(@online_student), :class => 'btn btn-primary' do %>
+    <i class="icon-pencil icon-white"></i>
+    Edit
+  <% end %>
+  <h1>Listing online_students</h1>
+</div>
+
+<dl>
+  <dt>First name:</dt>
+  <dd><%= @online_student.first_name %></dd>
+
+  <dt>Middle name:</dt>
+  <dd><%= @online_student.middle_name %></dd>
+
+  <dt>Last name:</dt>
+  <dd><%= @online_student.last_name %></dd>
+
+  <dt>Gender:</dt>
+  <dd><%= @online_student.gender %></dd>
+
+  <dt>Sslc hall ticket:</dt>
+  <dd><%= @online_student.sslc_hall_ticket %></dd>
+
+  <dt>Sslc percentage:</dt>
+  <dd><%= @online_student.sslc_percentage %></dd>
+
+  <dt>Year of passing:</dt>
+  <dd><%= @online_student.year_of_passing %></dd>
+
+  <dt>Course join:</dt>
+  <dd><%= @online_student.course_join %></dd>
+
+  <dt>Address line1:</dt>
+  <dd><%= @online_student.address_line1 %></dd>
+
+  <dt>Address line2:</dt>
+  <dd><%= @online_student.address_line2 %></dd>
+
+  <dt>Address landmark:</dt>
+  <dd><%= @online_student.address_landmark %></dd>
+
+  <dt>Taluka:</dt>
+  <dd><%= @online_student.taluka %></dd>
+
+  <dt>District:</dt>
+  <dd><%= @online_student.district %></dd>
+
+  <dt>State:</dt>
+  <dd><%= @online_student.state %></dd>
+
+  <dt>Pincode:</dt>
+  <dd><%= @online_student.pincode %></dd>
+
+  <dt>Phone number:</dt>
+  <dd><%= @online_student.phone_number %></dd>
+
+  <dt>Father name:</dt>
+  <dd><%= @online_student.father_name %></dd>
+
+  <dt>Parent occupation:</dt>
+  <dd><%= @online_student.parent_occupation %></dd>
+
+  <dt>Family annual income:</dt>
+  <dd><%= @online_student.family_annual_income %></dd>
+
+  <dt>Application number:</dt>
+  <dd><%= @online_student.application_number %></dd>
+
+</dl>

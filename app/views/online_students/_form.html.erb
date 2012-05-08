@@ -1,0 +1,32 @@
+<%= simple_form_for(@online_student, :defaults => { :input_html => { :class => 'input-large' } }) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <!--<%= f.label :student_name, :input_html => { :class => 'input-small' } %> -->
+    <%= f.input :first_name, :label => 'Applicant Name', :input_html => { :class => 'input-small' } %>
+    <%= f.input :middle_name, :input_html => { :class => 'input-small' } %>
+    <%= f.input :last_name, :input_html => { :class => 'input-small' } %>
+    <%= f.input :gender, :collection => ["Boy","Girl"], :as => :radio_buttons %>
+    <%= f.input :sslc_hall_ticket %>
+    <%= f.input :sslc_percentage %>
+    <%= f.input :year_of_passing %>
+    <%= f.input :course_join %>
+    <%= f.input :address_line1 %>
+    <%= f.input :address_line2 %>
+    <%= f.input :address_landmark %>
+    <%= f.input :taluka %>
+    <%= f.input :district %>
+    <%= f.input :state %>
+    <%= f.input :pincode %>
+    <%= f.input :phone_number %>
+    <%= f.input :father_name %>
+    <%= f.input :parent_occupation %>
+    <%= f.input :family_annual_income %>
+    <%= f.input :application_number %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, :class => "btn-primary" %>
+  </div>
+<% end %>
+

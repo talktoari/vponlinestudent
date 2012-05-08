@@ -1,0 +1,67 @@
+<div class="page-header">
+  <%= link_to new_online_student_path, :class => 'btn btn-primary' do %>
+    <i class="icon-plus icon-white"></i>
+    New Online student
+  <% end %>
+  <h1>Listing online_students</h1>
+</div>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Middle name</th>
+      <th>Last name</th>
+      <th>Gender</th>
+      <th>Sslc hall ticket</th>
+      <th>Sslc percentage</th>
+      <th>Year of passing</th>
+      <th>Course join</th>
+      <th>Address line1</th>
+      <th>Address line2</th>
+      <th>Address landmark</th>
+      <th>Taluka</th>
+      <th>District</th>
+      <th>State</th>
+      <th>Pincode</th>
+      <th>Phone number</th>
+      <th>Father name</th>
+      <th>Parent occupation</th>
+      <th>Family annual income</th>
+      <th>Application number</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+<% @online_students.each do |online_student| %>
+    <tr>
+      <td><%= online_student.first_name %></td>
+      <td><%= online_student.middle_name %></td>
+      <td><%= online_student.last_name %></td>
+      <td><%= online_student.gender %></td>
+      <td><%= online_student.sslc_hall_ticket %></td>
+      <td><%= online_student.sslc_percentage %></td>
+      <td><%= online_student.year_of_passing %></td>
+      <td><%= online_student.course_join %></td>
+      <td><%= online_student.address_line1 %></td>
+      <td><%= online_student.address_line2 %></td>
+      <td><%= online_student.address_landmark %></td>
+      <td><%= online_student.taluka %></td>
+      <td><%= online_student.district %></td>
+      <td><%= online_student.state %></td>
+      <td><%= online_student.pincode %></td>
+      <td><%= online_student.phone_number %></td>
+      <td><%= online_student.father_name %></td>
+      <td><%= online_student.parent_occupation %></td>
+      <td><%= online_student.family_annual_income %></td>
+      <td><%= online_student.application_number %></td>
+      <td><%= link_to 'Show', online_student %></td>
+      <td><%= link_to 'Edit', edit_online_student_path(online_student) %></td>
+      <td><%= link_to 'Destroy', online_student, confirm: 'Are you sure?', method: :delete %></td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
