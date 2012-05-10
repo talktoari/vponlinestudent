@@ -7,68 +7,49 @@
     <i class="icon-pencil icon-white"></i>
     Edit
   <% end %>
-  <h1>Listing online_students</h1>
+  <h1>Application Details</h1>
+  <h2><small>Application number: </small><%= @online_student.application_number %></h2>
+  <div class="alert alert-info">Please make a note of your Application Number. This will be used for any further correspondence. We will process your application and contact you.</div>
 </div>
 
 <dl>
-  <dt>First name:</dt>
-  <dd><%= @online_student.first_name %></dd>
-
-  <dt>Middle name:</dt>
-  <dd><%= @online_student.middle_name %></dd>
-
-  <dt>Last name:</dt>
-  <dd><%= @online_student.last_name %></dd>
+  <dt>Applicant Name:</dt>
+  <dd><%= @online_student.first_name %><%= " " + @online_student.middle_name %> <%= " " + @online_student.last_name %></dd>
 
   <dt>Gender:</dt>
   <dd><%= @online_student.gender %></dd>
 
-  <dt>Sslc hall ticket:</dt>
+  <dt>SSLC Hall Ticket #:</dt>
   <dd><%= @online_student.sslc_hall_ticket %></dd>
 
-  <dt>Sslc percentage:</dt>
+  <dt>SSLC %age:</dt>
   <dd><%= @online_student.sslc_percentage %></dd>
 
-  <dt>Year of passing:</dt>
+  <dt>Year of Passing:</dt>
   <dd><%= @online_student.year_of_passing %></dd>
 
-  <dt>Course join:</dt>
+  <dt>Course Likely to Join:</dt>
   <dd><%= @online_student.course_join %></dd>
 
-  <dt>Address line1:</dt>
+  <dt>Full Address:</dt>
   <dd><%= @online_student.address_line1 %></dd>
-
-  <dt>Address line2:</dt>
   <dd><%= @online_student.address_line2 %></dd>
-
-  <dt>Address landmark:</dt>
   <dd><%= @online_student.address_landmark %></dd>
 
-  <dt>Taluka:</dt>
-  <dd><%= @online_student.taluka %></dd>
+  <dt>Taluka District State PinCode:</dt>
+  <dd><%= @online_student.taluka %> <%= @online_student.district %><%= ", " + @online_student.state %> <%= "Pin: " + @online_student.pincode %></dd>
 
-  <dt>District:</dt>
-  <dd><%= @online_student.district %></dd>
-
-  <dt>State:</dt>
-  <dd><%= @online_student.state %></dd>
-
-  <dt>Pincode:</dt>
-  <dd><%= @online_student.pincode %></dd>
-
-  <dt>Phone number:</dt>
+  <dt>Phone Number:</dt>
   <dd><%= @online_student.phone_number %></dd>
 
-  <dt>Father name:</dt>
+  <dt>Father's Name:</dt>
   <dd><%= @online_student.father_name %></dd>
 
-  <dt>Parent occupation:</dt>
+  <dt>Parent's Occupation:</dt>
   <dd><%= @online_student.parent_occupation %></dd>
 
-  <dt>Family annual income:</dt>
+  <dt>Family Annual Income:</dt>
   <dd><%= @online_student.family_annual_income %></dd>
 
-  <dt>Application number:</dt>
-  <dd><%= @online_student.application_number %></dd>
-
 </dl>
+

@@ -1,4 +1,6 @@
 class OnlineStudentsController < ApplicationController
+  before_filter :authenticate, :except => [:new, :create, :show]
+ # http_basic_authenticate_with :Username => "arijit", :password => "arijit", :except => [:new, :create]
   # GET /online_students
   # GET /online_students.json
   def index
@@ -41,10 +43,20 @@ class OnlineStudentsController < ApplicationController
   # POST /online_students.json
   def create
     @online_student = OnlineStudent.new(params[:online_student])
+    latest_id = OnlineStudent.maximum('id')
+    if latest_id.nil?
+      cur_id = 1
+    else
+      cur_id = latest_id + 1
+    end
+
+    # Generate Application Number
+    @online_student.application_number = "VP-OL-%.6d" % cur_id
+    # @online_student.application_number = "VP-OL-%.6d" % cur_id
 
     respond_to do |format|
       if @online_student.save
-        format.html { redirect_to @online_student, notice: 'Online student was successfully created.' }
+        format.html { redirect_to @online_student, notice: 'Your Application was successfully submitted.' }
         format.json { render json: @online_student, status: :created, location: @online_student }
       else
         format.html { render action: "new" }
@@ -81,3 +93,4 @@ class OnlineStudentsController < ApplicationController
     end
   end
 end
+

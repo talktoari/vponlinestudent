@@ -3,26 +3,25 @@
 
   <div class="form-inputs">
     <!--<%= f.label :student_name, :input_html => { :class => 'input-small' } %> -->
-    <%= f.input :first_name, :label => 'Applicant Name', :input_html => { :class => 'input-small' } %>
-    <%= f.input :middle_name, :input_html => { :class => 'input-small' } %>
-    <%= f.input :last_name, :input_html => { :class => 'input-small' } %>
+    <%= f.input :first_name, :label => 'First Name', :input_html => { :class => 'input-medium' }, :placeholder => 'First Name', :required => true, :tooltip => "This field is needed" %>
+    <%= f.input :middle_name, :label => 'Middle Name', :input_html => { :class => 'input-medium' }, :placeholder => 'Middle Name' %>
+    <%= f.input :last_name, :label => 'Last Name', :input_html => { :class => 'input-medium' }, :placeholder => 'Last Name' %>
     <%= f.input :gender, :collection => ["Boy","Girl"], :as => :radio_buttons %>
-    <%= f.input :sslc_hall_ticket %>
-    <%= f.input :sslc_percentage %>
-    <%= f.input :year_of_passing %>
-    <%= f.input :course_join %>
-    <%= f.input :address_line1 %>
-    <%= f.input :address_line2 %>
-    <%= f.input :address_landmark %>
-    <%= f.input :taluka %>
-    <%= f.input :district %>
-    <%= f.input :state %>
-    <%= f.input :pincode %>
-    <%= f.input :phone_number %>
-    <%= f.input :father_name %>
-    <%= f.input :parent_occupation %>
-    <%= f.input :family_annual_income %>
-    <%= f.input :application_number %>
+    <%= f.input :sslc_hall_ticket, :label => 'SSLC Hall Ticket #', :placeholder => 'Admit Card / Exam Number' %>
+    <%= f.input :sslc_percentage, :label => 'SSLC %age', :placeholder => 'Enter Average SSLC percentage' %>
+    <%= f.input :year_of_passing, :label => 'Year of Passing', :placeholder => 'Which year did you pass SSLC?', :hint => "If you have appeared for the exam this year and results are yet to be declared then enter current year" %>
+    <%= f.input :course_join, :label => 'Course Likely to Join', :placeholder => 'Arts / Science / Commerce / Others', :hint => "If Others, then please mention the course name" %>
+    <%= f.input :address_line1, :label => 'Address Line 1', :placeholder => 'House No. / Plot No, etc', :required => true %>
+    <%= f.input :address_line2, :label => 'Address Line 2', :placeholder => 'Road / Street / PO Number, City etc' %>
+    <%= f.input :address_landmark, :label => 'Landmark', :placeholder => 'Near PostOffice / Near School, etc' %>
+    <%= f.input :taluka, :placeholder => 'Which Taluka do you belong to?' %>
+    <%= f.input :district, :collection => ["Bagalkot","Dharwad","Hubli","Gulbarga","Bijapur","Hospet"], :prompt => "Select District", :required => true %>
+    <%= f.input :state, :collection => ["Karnataka","Maharashtra"], :prompt => "Select State", :required => true %>
+    <%= f.input :pincode, :placeholder => "Enter your PinCode" %>
+    <%= f.input :phone_number, :label => 'Telephone Number', :placeholder => 'Landline / Mobile Number', :hint => "Landline with STD code. Eg: 080-XXXXXXXX", :required => true %>
+    <%= f.input :father_name, :label => "Father's Name", :placeholder => "Enter Father's Name here" %>
+    <%= f.input :parent_occupation, :label => "Parent's Occupation", :placeholder => "Eg: Farmer, Coolie, etc" %>
+    <%= f.input :family_annual_income, :label => "Family's Annual Income", :placeholder => "Eg: 30000, 45700, etc", :hint => "Enter ONLY numbers, No Comma please" %>
   </div>
 
   <div class="form-actions">
